@@ -28,6 +28,7 @@ class App extends Component {
     input: '',
     graphCoords: null,
     graphDirections: null,
+    count: 0,
   };
 
   componentDidMount() {
@@ -194,10 +195,11 @@ class App extends Component {
           room_id: res.data.room_id,
           coords: this.parseCoords(res.data.coordinates),
           exits: [...res.data.exits],
-          ooldown: res.data.cooldown,
+          cooldown: res.data.cooldown,
           graph,
         }));
         this.updateVisited();
+        this.countdown(res.data.cooldown);
       })
       .catch(err => console.log('There was an error.'));
   };
@@ -246,6 +248,7 @@ class App extends Component {
         cooldown: res.cooldown,
         players: res.players,
       });
+      this.countdown(res.cooldown);
     } else {
       console.log(res);
     }
@@ -296,6 +299,19 @@ class App extends Component {
     this.moveToRoom(value);
   };
 
+  countdown = start => {
+    let num = start;
+    setTimeout(() => {
+      if (num === 0) {
+        this.setState({ count: 'done' });
+        return 0;
+      } else {
+        this.setState({ count: num });
+        this.countdown(num - 1);
+      }
+    }, 1000);
+  };
+
   render() {
     return (
       <div className="App">
@@ -317,7 +333,8 @@ class App extends Component {
               <strong>Exits:</strong> {this.state.exits}
             </p>
             <p>
-              <strong>Cooldown:</strong> {this.state.cooldown}
+              <strong>Cooldown:</strong> {this.state.cooldown}: count :{' '}
+              {this.state.count}
             </p>
             <input
               type="text"
@@ -328,7 +345,7 @@ class App extends Component {
             <Buttons move={this.moveRooms} />
           </div>
         </div>
-        <Map graph={this.state.graph} />
+        <Map graph={this.state.graph} current={this.state.coords} />
         <p className="players">
           <strong>Current Players In room {this.state.room_id}:</strong>
           {this.state.players.map(player => (

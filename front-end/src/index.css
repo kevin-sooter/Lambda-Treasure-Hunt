@@ -158,21 +158,23 @@ button .arrow-down {
   width: 10%;
   height: 100%;
   background: linear-gradient(
-    90deg,
-    rgba(105, 100, 100, 1) 15%,
-    rgba(207, 207, 207, 1) 62%,
-    rgba(255, 255, 255, 1) 100%
+    263deg,
+    rgba(186, 168, 108, 1) 18%,
+    rgba(254, 186, 75, 1) 49%,
+    rgba(134, 108, 0, 1) 80%
   );
+  /* background: linear-gradient(90deg, rgba(105,100,100,1) 15%, rgba(207,207,207,1) 62%, rgba(255,255,255,1) 100%); */
 }
 .players {
   margin: 0;
   width: 10%;
   background: linear-gradient(
-    90deg,
-    rgba(105, 100, 100, 1) 15%,
-    rgba(207, 207, 207, 1) 62%,
-    rgba(255, 255, 255, 1) 100%
+    263deg,
+    rgba(186, 168, 108, 1) 10%,
+    rgba(254, 186, 75, 1) 40%,
+    rgba(134, 108, 0, 1) 80%
   );
+  /* background: linear-gradient(90deg, rgba(105,100,100,1) 15%, rgba(207,207,207,1) 62%, rgba(255,255,255,1) 100%); */
   height: 100%;
 }
 .map {
