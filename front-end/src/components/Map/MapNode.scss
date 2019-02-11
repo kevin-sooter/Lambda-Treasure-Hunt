@@ -1,0 +1,16 @@
+.m-node {
+  // padding: 2px;
+  margin: 2px;
+  height: 45px;
+}
+
+.m-node-exists {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.m-node-active {
+  background: rgba(255, 255, 255, 0.5);
+}
