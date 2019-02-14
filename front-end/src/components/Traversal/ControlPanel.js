@@ -21,6 +21,26 @@ const ControlPanel = props => {
         disabled={false}
         active={props.auto.active}
       />
+      <Button
+        text="N"
+        // clicky={props.move.clicky}
+        disabled={props.move.disabled}
+      />
+      <Button
+        text="S"
+        // clicky={props.move.clicky}
+        disabled={props.move.disabled}
+      />
+      <Button
+        text="E"
+        // clicky={props.move.clicky}
+        disabled={props.move.disabled}
+      />
+      <Button
+        text="W"
+        // clicky={props.move.clicky}
+        disabled={props.move.disabled}
+      />
     </div>
   );
 };
