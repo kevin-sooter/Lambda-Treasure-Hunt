@@ -22,24 +22,39 @@ const ControlPanel = props => {
         active={props.auto.active}
       />
       <Button
-        text="N"
+        text="North"
         // clicky={props.move.clicky}
-        disabled={props.move.disabled}
+        // disabled={props.move.disabled}
       />
       <Button
-        text="S"
+        text="South"
         // clicky={props.move.clicky}
-        disabled={props.move.disabled}
+        // disabled={props.move.disabled}
       />
       <Button
-        text="E"
+        text="East"
         // clicky={props.move.clicky}
-        disabled={props.move.disabled}
+        // disabled={props.move.disabled}
       />
       <Button
-        text="W"
+        text="West"
         // clicky={props.move.clicky}
-        disabled={props.move.disabled}
+        // disabled={props.move.disabled}
+      />
+      <Button
+        text="Pick up Treasure"
+        // clicky={props.move.clicky}
+        // disabled={props.move.disabled}
+      />
+      <Button
+        text="Sell Treasure"
+        // clicky={props.move.clicky}
+        // disabled={props.move.disabled}
+      />
+      <Button
+        text="Drop Treasure"
+        // clicky={props.move.clicky}
+        // disabled={props.move.disabled}
       />
     </div>
   );
